@@ -358,11 +358,10 @@ _initialFileVariables:
 	.db <wKidName+5				$00
 	.db <wObtainedTreasureFlags		1<<TREASURE_PUNCH
 	.db <wMaxBombs				$10
-	.db <wLinkHealth			$10 ; 4 hearts (gets overwritten in standard game)
-	.db <wLinkMaxHealth			$10
-.ifdef ROM_AGES
-	.db <wDeathRespawnBuffer.group		$00
-	.db <wDeathRespawnBuffer.room		$8a
+	.db <wLinkHealth			$0c
+	.db <wLinkMaxHealth			$0c
+	.db <wDeathRespawnBuffer.group		$02
+	.db <wDeathRespawnBuffer.room		$00
 	.db <wDeathRespawnBuffer.y		$38
 	.db <wDeathRespawnBuffer.x		$48
 	.db <wDeathRespawnBuffer.facingDir	$00
@@ -372,48 +371,25 @@ _initialFileVariables:
 	.db <wPirateShipY			$48
 	.db <wPirateShipX			$48
 	.db <wPirateShipAngle			$02
-.else
-	.db <wDeathRespawnBuffer.group		$00
-	.db <wDeathRespawnBuffer.room       $a7
-	.db <wDeathRespawnBuffer.y          $38
-	.db <wDeathRespawnBuffer.x          $48
-	.db <wDeathRespawnBuffer.facingDir  $02
-.endif
+
 	.db $00
 
 ; Standard game (not linked or hero)
 _initialFileVariables_standardGame:
-	.db <wLinkHealth			$0c
-	.db <wLinkMaxHealth			$0c
 	; Continue reading the following data
 
 ; Hero game (not linked+hero game)
 _initialFileVariables_heroGame:
-	.db <wChildStatus			$00
-	.db <wShieldLevel			$01
-.ifdef ROM_AGES
-	.db <wAnimalCompanion			$00
-.else
-	.db <wAnimalCompanion			$0b
-.endif
 	.db $00
 
 ; Linked game, or linked+hero game
 _initialFileVariables_linkedGame:
-	.db <wSwordLevel			$01
-	.db <wShieldLevel			$01
-	.db <wInventoryStorage			ITEMID_SWORD
-	.db <wObtainedTreasureFlags,		(1<<TREASURE_PUNCH) | (1<<TREASURE_SWORD)
-.ifdef ROM_AGES
-	.db <wPirateShipY			$58
-	.db <wPirateShipX			$78
-.endif
 	.db $00
 
 ; This string is different in ages and seasons.
 _saveVerificationString:
 .ifdef ROM_AGES
-	.ASC "Z21216-0"
+	.ASC "BEEFE6-0"
 .else
-	.ASC "Z11216-0"
+	.ASC "BEEFE6-0"
 .endif

@@ -1712,82 +1712,24 @@ childScript_stage9_singer:
 ; ==============================================================================
 
 ; Subid $00: Cutscene at the beginning of game (talking to Link, then gets possessed)
-nayruScript00_part1:
-	setanimation $02
-	checkmemoryeq wTmpcfc0.genericCutscene.cfd0, $0a
+nayruScript00:
 
-	; Moving toward Link
-	wait 10
-	setspeed SPEED_040
-	movedown $20
-	wait 30
+	disableinput
+	asm15 scriptHelp.turnToFaceLink
+	asm15 scriptHelp.forceLinkDirection, DIR_LEFT
+	fadeinFromWhite
+	wait 90
+	showtext TX_1d06
 
-	showtext TX_1d00
-	wait 30
+	enableinput
 
-	writememory   wTmpcfc0.genericCutscene.cfd0, $0b
-	checkmemoryeq wTmpcfc0.genericCutscene.cfd0, $0c
-	asm15 scriptHelp.setLinkAnimation, LINK_ANIM_MODE_NONE
-	wait 40
+	initcollisions
 
-	showtext TX_1d22
-	wait 30
-
-	writememory   wTmpcfc0.genericCutscene.cfd0, $0d
-	checkmemoryeq wTmpcfc0.genericCutscene.cfd0, $0f
-
-	setanimation  $02
-	checkmemoryeq wTmpcfc0.genericCutscene.cfd0, $13
-
-	; Backing away from Veran
-	setspeed SPEED_040
-	setangle $00
-	applyspeed $20
-	checkmemoryeq wTmpcfc0.genericCutscene.cfd0, $15
-	wait 120
-
-	writememory wTmpcfc0.genericCutscene.cfd0, $16
-	wait 30
-
-	; Moving forward again
-	setangle $10
-	setspeed SPEED_020
-	applyspeed $81
-	setcoords $28, $78
-	wait 210
-
-	; Fully possessed
-	setanimation $05
-	writeobjectbyte Interaction.oamFlags, $06
-	playsound SND_SWORD_OBTAINED
-	wait 60
-
-	setanimation $02
-	writememory wTmpcfc0.genericCutscene.cfd0, $17
-	orroomflag $40
-	scriptend
-
-; Part 2: after jumping up the cliff, she goes to the past
-nayruScript00_part2:
-	setanimation $02
-	checkmemoryeq wTmpcfc0.genericCutscene.cfd0, $1c
-	wait 40
-
-	showtext TX_5605
-	wait 60
-
-	setspeed SPEED_100
-	moveup $11
-	writeobjectbyte Interaction.var3d, $01 ; Signal to make her transparent
-	playsound SND_WARP_START
-	wait 120
-
-	writememory wTmpcfc0.genericCutscene.cfd0, $1d
 	scriptend
 
 
 nayruScript01:
-	loadscript scriptHelp.nayruScript01
+	rungenericnpc TX_010b
 
 
 ; Subid $02: Nayru on maku tree screen after being saved

@@ -2645,10 +2645,10 @@ b2_updateMenus:
 	jr z,+
 
 	; Return if you haven't seen the opening cutscene yet
-	ld a,(wGlobalFlags+GLOBALFLAG_INTRO_DONE/8)
-	bit GLOBALFLAG_INTRO_DONE&7,a
-	ld a, SND_ERROR
-	jp z,playSound
+	;ld a,(wGlobalFlags+GLOBALFLAG_INTRO_DONE/8)
+	;bit GLOBALFLAG_INTRO_DONE&7,a
+	;ld a, SND_ERROR
+	;jp z,playSound
 +
 	ld a,(wMenuDisabled)
 	ld b,a

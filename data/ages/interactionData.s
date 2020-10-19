@@ -78,7 +78,7 @@ interactionData:
 	/* $33 */ m_InteractionData $00 $00 $00
 	/* $34 */ m_InteractionData $3d $00 $60
 	/* $35 */ m_InteractionData interaction35SubidData
-	/* $36 */ m_InteractionData $26 $00 $12
+	/* $36 */ m_InteractionData $26 $00 $22
 	/* $37 */ m_InteractionData $24 $00 $12
 	/* $38 */ m_InteractionData interaction38SubidData
 	/* $39 */ m_InteractionData $4e $10 $30

@@ -41,7 +41,7 @@ tilesetData: ; 4:4f9c
 	.db $0f $01
 	.db UNIQGFXH_07
 	.db GFXH_40
-	.db PALH_14
+	.db PALH_12
 	.db $04 $00 $01
 
 ; Tileset 0x06
@@ -115,161 +115,161 @@ tilesetData: ; 4:4f9c
 	.db $0d $03 $06
 
 ; Tileset 0x10
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_02
 	.db GFXH_41
 	.db PALH_11
 	.db $0f $02 $00
 
 ; Tileset 0x11
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_02
 	.db GFXH_41
 	.db PALH_11
 	.db $0f $03 $00
 
 ; Tileset 0x12
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_02
 	.db GFXH_41
 	.db PALH_2f
 	.db $0f $02 $00
 
 ; Tileset 0x13
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_03
 	.db GFXH_41
 	.db PALH_23
 	.db $01 $02 $01
 
 ; Tileset 0x14
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_04
 	.db GFXH_41
 	.db PALH_25
 	.db $02 $02 $01
 
 ; Tileset 0x15
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_04
 	.db GFXH_41
 	.db PALH_25
 	.db $02 $03 $01
 
 ; Tileset 0x16
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_05
 	.db GFXH_41
 	.db PALH_33
 	.db $14 $02 $01
 
 ; Tileset 0x17
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_06
 	.db GFXH_41
 	.db PALH_13
 	.db $03 $02 $03
 
 ; Tileset 0x18
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_07
 	.db GFXH_41
 	.db PALH_15
 	.db $04 $02 $01
 
 ; Tileset 0x19
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_08
 	.db GFXH_41
 	.db PALH_17
 	.db $05 $02 $04
 
 ; Tileset 0x1a
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_09
 	.db GFXH_41
 	.db PALH_29
 	.db $06 $02 $01
 
 ; Tileset 0x1b
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_09
 	.db GFXH_41
 	.db PALH_29
 	.db $06 $03 $01
 
 ; Tileset 0x1c
-	.db $0f $91
+	.db $0f $01
 	.db UNIQGFXH_09
 	.db GFXH_41
 	.db PALH_29
 	.db $06 $02 $01
 
 ; Tileset 0x1d
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_0a
 	.db GFXH_41
 	.db PALH_2a
 	.db $07 $02 $01
 
 ; Tileset 0x1e
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_0d
 	.db GFXH_41
 	.db PALH_1b
 	.db $09 $02 $02
 
 ; Tileset 0x1f
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_0e
 	.db GFXH_41
 	.db PALH_1d
 	.db $0a $02 $03
 
 ; Tileset 0x20
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_0f
 	.db GFXH_41
 	.db PALH_1f
 	.db $0b $02 $05
 
 ; Tileset 0x21
-	.db $0f $81
+	.db $0f $01
 	.db UNIQGFXH_11
 	.db GFXH_41
 	.db PALH_27
 	.db $0e $02 $01
 
 ; Tileset 0x22
-	.db $0f $02
+	.db $0f $01
 	.db UNIQGFXH_00
 	.db GFXH_70
 	.db PALH_30
 	.db $11 $00 $07
 
 ; Tileset 0x23
-	.db $0f $02
+	.db $0f $01
 	.db UNIQGFXH_00
 	.db GFXH_70
 	.db PALH_30
 	.db $11 $01 $07
 
 ; Tileset 0x24
-	.db $0f $02
+	.db $0f $01
 	.db UNIQGFXH_00
 	.db GFXH_70
 	.db PALH_30
 	.db $11 $03 $07
 
 ; Tileset 0x25
-	.db $0f $02
+	.db $0f $01
 	.db UNIQGFXH_00
 	.db GFXH_71
 	.db PALH_31
 	.db $12 $00 $ff
 
 ; Tileset 0x26
-	.db $0f $82
+	.db $0f $01
 	.db UNIQGFXH_00
 	.db GFXH_70
 	.db PALH_30

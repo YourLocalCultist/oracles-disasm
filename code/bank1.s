@@ -3454,7 +3454,9 @@ _initializeGame:
 
 	ld a,GLOBALFLAG_PREGAME_INTRO_DONE
 	call checkGlobalFlag
-	jr nz,_func_5a60
+	;jr nz,_func_5a60
+	
+	jp _func_5a60
 
 	ld a,GLOBALFLAG_3d
 	call checkGlobalFlag
@@ -4138,9 +4140,9 @@ setCutsceneIndexIfCutsceneTriggerSet:
 
 ;;
 checkPlayRoomMusic:
-	ld a, GLOBALFLAG_INTRO_DONE
-	call checkGlobalFlag
-	ret z
+	;ld a, GLOBALFLAG_INTRO_DONE
+	;call checkGlobalFlag
+	;ret z
 
 .ifdef ROM_SEASONS
 	; Override subrosia music if on a date with Rosa

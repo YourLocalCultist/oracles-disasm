@@ -3749,8 +3749,8 @@ interactionCode4d:
 
 ; Same cutscene as subid $03, but second part
 @initSubid04:
-	callab agesInteractionsBank08.nayruState0@init0e
-	jp _ambi_loadScript
+	;callab agesInteractionsBank08.nayruState0@init0e
+	;jp _ambi_loadScript
 
 
 ; Cutscene where you give mystery seeds to Ambi
@@ -3767,7 +3767,7 @@ interactionCode4d:
 ; Cutscene where Ralph confronts Ambi
 @initSubid05:
 	; Call some of nayru's code to load possessed palette
-	callab agesInteractionsBank08.nayruState0@init0e
+	;callab agesInteractionsBank08.nayruState0@init0e
 
 	call objectSetVisiblec3
 	jp _ambi_loadScript
