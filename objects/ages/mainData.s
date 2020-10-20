@@ -22,7 +22,6 @@ group0Map61ObjectData:
 group0Map69ObjectData:
 group0Map6eObjectData:
 group0Map6fObjectData:
-group0Map75ObjectData:
 group0Map76ObjectData:
 group0Map7dObjectData:
 group0Map7eObjectData:
@@ -253,7 +252,6 @@ group2Map0aObjectData:
 group2Map0bObjectData:
 group2Map0cObjectData:
 group2Map0dObjectData:
-group2Map11ObjectData:
 group2Map12ObjectData:
 group2Map13ObjectData:
 group2Map14ObjectData:
@@ -916,6 +914,7 @@ group0Map36ObjectData:
 
 group0Map37ObjectData:
 	obj_Pointer group0Map37EnemyObjectData
+	obj_Interaction $dc $01
 	obj_End
 
 group0Map38ObjectData:
@@ -2588,30 +2587,26 @@ group4Map11ObjectData:
 
 group4Map12ObjectData:
 	obj_Pointer group4Map12EnemyObjectData
+	obj_Interaction $1e $07 $50 $00
+	obj_Part $09 $00 $58
 	obj_End
 
 group4Map13ObjectData:
-	obj_Interaction $1e $08 $07 $00
-	obj_Interaction $1e $0b $70 $00
-	obj_Interaction $20 $03 $58 $78
 	obj_BeforeEvent group4Map13BeforeEventObjectData
+	obj_Part $03 $00 $92
+	obj_Part $03 $00 $17
+	obj_Pointer group4Map13EnemyObjectData
 	obj_End
 
 group4Map14ObjectData:
+	obj_Interaction $7f $00 $28 $78
 	obj_End
 
 group4Map15ObjectData:
-	obj_Interaction $20 $00 $58 $a8
-	obj_Interaction $79 $05 $90 $30
-	obj_Part $09 $00 $1d
 	obj_End
 
 group4Map16ObjectData:
-	obj_Interaction $20 $00 $18 $78
-	obj_Interaction $20 $05
-	obj_Interaction $1e $06 $a7 $00
-	obj_Part $09 $00 $22
-	obj_Part $09 $01 $2c
+	obj_Part $03 $00 $57
 	obj_End
 
 group4Map17ObjectData:
@@ -2619,11 +2614,10 @@ group4Map17ObjectData:
 	obj_End
 
 group4Map18ObjectData:
-	obj_Interaction $1e $08 $07 $00
-	obj_Interaction $1e $0b $50 $00
-	obj_Interaction $20 $02 $58 $78
-	obj_Interaction $7e $00 $58 $78
 	obj_BeforeEvent group4Map18BeforeEventObjectData
+	obj_Interaction $1e $08 $07 $00
+	obj_Interaction $1e $09 $5e $00
+	obj_Interaction $20 $03
 	obj_End
 
 group4Map19ObjectData:
@@ -2632,21 +2626,22 @@ group4Map19ObjectData:
 
 group4Map1aObjectData:
 	obj_Pointer group4Map1aEnemyObjectData
-	obj_Interaction $64 $00 $40 $20
+	obj_Interaction $0d $17 $50 $78
 	obj_End
 
 group4Map1bObjectData:
-	obj_Interaction $20 $04 $28 $b8
 	obj_Pointer group4Map1bEnemyObjectData
+	obj_Interaction $12 $01 $58 $a8
 	obj_End
 
 group4Map1cObjectData:
-	obj_Interaction $20 $00 $58 $98
-	obj_Part $09 $00 $55
 	obj_Pointer group4Map1cEnemyObjectData
+	obj_Interaction $1e $08 $07 $00
+	obj_Interaction $1e $0a $a7 $78
 	obj_End
 
 group4Map1dObjectData:
+	obj_Pointer group4Map1dEnemyObjectData
 	obj_End
 
 group4Map1eObjectData:
@@ -2658,16 +2653,11 @@ group4Map1fObjectData:
 	obj_End
 
 group4Map20ObjectData:
-	obj_Interaction $1e $04 $07 $00
-	obj_Interaction $1e $05 $3e $00
-	obj_Interaction $19 $05 $78 $a8
-	obj_Interaction $1a $00 $2e $98
-	obj_Interaction $1a $00 $4e $98
-	obj_Interaction $1a $00 $2e $b8
-	obj_Interaction $1a $00 $4e $b8
-	obj_Interaction $21 $03 $48 $a8
-	obj_Interaction $21 $19
+	obj_Interaction $1e $0b $50 $00
 	obj_Pointer group4Map20EnemyObjectData
+	obj_Interaction $20 $02 $58 $78
+	obj_BeforeEvent group4Map20BeforeEventObjectData
+	obj_Interaction $1e $08 $0b $00
 	obj_End
 
 group4Map21ObjectData:
@@ -2675,9 +2665,9 @@ group4Map21ObjectData:
 	obj_End
 
 group4Map22ObjectData:
-	obj_Interaction $1e $05 $5e $00
-	obj_Part $09 $80 $5b
 	obj_Pointer group4Map22EnemyObjectData
+	obj_Interaction $1e $08 $07 $00
+	obj_Interaction $1e $09 $5e $00
 	obj_End
 
 group4Map23ObjectData:
@@ -2692,6 +2682,8 @@ group4Map24ObjectData:
 
 group4Map25ObjectData:
 	obj_Pointer group4Map25EnemyObjectData
+	obj_Interaction $12 $00 $88 $78
+	obj_Interaction $e2 $01 $00 $08
 	obj_End
 
 group4Map27ObjectData:
@@ -4819,7 +4811,7 @@ group2Map01ObjectData:
 	obj_Interaction $47 $01 $28 $80
 	obj_Interaction $47 $03 $28 $68
 	obj_Interaction $47 $04 $28 $50
-	obj_Interaction $46 $00 $58 $88
+	obj_Interaction $46 $01 $58 $28
 	obj_End
 
 group4Map01ObjectData:
@@ -4836,4 +4828,12 @@ group2Map10ObjectData:
 
 group2Map00ObjectData:
 	obj_Interaction $36 $00 $30 $58
+	obj_End
+
+group0Map75ObjectData:
+	obj_Interaction $83 $00 $50 $58
+	obj_End
+
+group2Map11ObjectData:
+	obj_Interaction $43 $00 $38 $78
 	obj_End

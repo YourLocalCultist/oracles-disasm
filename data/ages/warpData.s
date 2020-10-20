@@ -96,7 +96,7 @@ group0WarpDestTable:
 	m_WarpDest $e2 $54 $0 $1
 	m_WarpDest $f1 $43 $0 $1
 	m_WarpDest $39 $24 $0 $1
-	m_WarpDest $00 $00 $0 $1
+	m_WarpDest $37 $34 $0 $1
 
 group1WarpDestTable:
 	m_WarpDest $48 $21 $0 $1
@@ -638,7 +638,7 @@ group0WarpSources: ; $135ae
 	m_StandardWarp $00 $78 $0b $2 $4
 	m_StandardWarp $00 $76 $0c $2 $4
 	m_StandardWarp $00 $39 $18 $2 $4
-	m_StandardWarp $00 $37 $06 $4 $3
+	m_StandardWarp $00 $37 $06 $4 $4
 	m_WarpSourcesEnd
 
 warpSource7716:
@@ -951,6 +951,7 @@ group4WarpSources: ; $13ace
 	m_StandardWarp $04 $f3 $33 $1 $3
 	m_StandardWarp $08 $f3 $33 $1 $3
 	m_StandardWarp $04 $fe $49 $4 $3
+	m_StandardWarp $04 $25 $4e $0 $4
 	m_WarpSourcesEnd
 
 warpSource7b8e:

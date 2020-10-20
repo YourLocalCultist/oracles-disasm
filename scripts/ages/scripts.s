@@ -1722,7 +1722,7 @@ nayruScript00:
 	wait 90
 	showtext TX_0111
 	enableinput
-	rungenericnpc TX_0111
+	rungenericnpc TX_0112
 	scriptend
 
 
@@ -7523,7 +7523,32 @@ tokayShopItemScript:
 ; INTERACID_BOMB_UPGRADE_FAIRY
 ; ==============================================================================
 bombUpgradeFairyScript:
-	loadscript scriptHelp.bombUpgradeFairyScript_body
+
+	asm15 objectSetInvisible
+	wait $30
+	disableinput
+
+	createpuff
+	asm15 objectSetVisible
+
+	setspeed SPEED_100
+
+	showtext <TX_000a
+	jumpiftextoptioneq $00, _jumpifnicefairy
+
+	;writememory wHasFairy, $ff
+	asm15 playSound, MUS_SADNESS
+
+	wait $50
+	moveup $60
+	enableinput
+	
+	scriptend
+
+_jumpifnicefairy
+	;writememory wHasFairy, $01
+	enableinput
+	scriptend
 
 
 ; ==============================================================================
@@ -9158,8 +9183,8 @@ interactiondcSubid01Script:
 	setmusic SNDCTRL_STOPMUSIC
 	wait 60
 	asm15 scriptHelp.interactiondc_removeGraveyardGateTiles1
-	wait 45
-	asm15 scriptHelp.interactiondc_removeGraveyardGateTiles2
+	;wait 45
+	;asm15 scriptHelp.interactiondc_removeGraveyardGateTiles2
 	wait 60
 	resetmusic
 	playsound SND_SOLVEPUZZLE

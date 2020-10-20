@@ -8446,29 +8446,26 @@ slateSlot_placeSlate:
 interactiondc_removeGraveyardGateTiles1:
 	ld a,$0a
 	call setScreenShakeCounter
-	ld a,$3a
+	ld a,$ee
 	ld c,$34
 	call setTile
-	ld a,$3a
-	ld c,$44
-	call setTile
+	;ld a,$3a
+	;ld c,$44
+	;call setTile
 
-	ld hl,@interleavedTiles
-	call _interactiondc_7bde
-	call _interactiondc_7bde
-	call _interactiondc_7bde
-	call _interactiondc_7bde
+	;ld hl,@interleavedTiles
+	;call _interactiondc_7bde
+	;call _interactiondc_7bde
+	;call _interactiondc_7bde
+	;call _interactiondc_7bde
 
-	ld bc,$4840
-	call _interactiondc_spawnPuff
+	;ld bc,$4840
+	;call _interactiondc_spawnPuff
 	ld bc,$4850
 	jp _interactiondc_spawnPuff
 
 @interleavedTiles:
-	.db $33 $3a $89 $01
-	.db $35 $3a $89 $03
-	.db $43 $98 $ec $01
-	.db $45 $9a $ec $03
+	.db $34 $ee
 
 ;;
 interactiondc_removeGraveyardGateTiles2:

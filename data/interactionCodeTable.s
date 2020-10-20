@@ -13,7 +13,7 @@ interactionCodeTable: ; $3b8b
 	.dw    commonInteractions1.interactionCode0a ; 0x0a
 	.dw    commonInteractions1.interactionCode0b ; 0x0b
 	.dw    commonInteractions1.interactionCode0c ; 0x0c
-	.dw                        interactionDelete ; 0x0d
+	.dw    commonInteractions1.interactionCode0d ; 0x0d
 	.dw                        interactionDelete ; 0x0e
 	.dw    commonInteractions1.interactionCode0f ; 0x0f
 	.dw    commonInteractions1.interactionCode10 ; 0x10

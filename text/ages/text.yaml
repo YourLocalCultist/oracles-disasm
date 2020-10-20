@@ -70,14 +70,16 @@ groups:
   - name: TX_000a
     index: 0x0a
     text: |-
-      You learned the
-      \col(1)Currents Tune\col(0)!\stop
-      Play it to move
-      from the past to
-      the present!
-      Choose it when
-      you use the
-      \col(1)harp\col(0)!
+      Hello!
+      I saw that you had wash a shore on this beach earlier...
+      Sorry I couldn't have been more help,
+      that girl found you first.\stop
+      ...\stop
+      Oh! I was keeping your sword safe!\stop
+      ...\stop
+      Can I come with you?
+        \opt()Yes \opt()No
+      
 
   - name: TX_000b
     index: 0x0b
@@ -1147,26 +1149,16 @@ groups:
   - name: TX_0111
     index: 0x11
     text: |-
-      ............\stop
-      That \col(3)Veran\col(0) lady
-      is frightening.
-      I was forced to
-      do her will, in
-      spite of myself.
+      What a relief! I thought you'd never wake up!\stop
+      You were tossing and turning...\stop
+      My name's Alice! You washed up on the beach earlier today.\stop
+      Huh, where are you? You're on Brynnsmouth Island!
 
   - name: TX_0112
     index: 0x12
     text: |-
-      Shadows were
-      surrounding the
-      Oracle of Ages,
-      so I came hoping
-      to take her to
-      \col(3)Hyrule\col(0). I had no
-      idea this would
-      happen...
-      \jump(TX_0111)
-    null_terminator: False
+      Follow the road west to the beach.
+      I think some of your things are still there.
 
   - name: TX_0113
     index: 0x13
@@ -1529,7 +1521,7 @@ groups:
     index: 0x01
     text: |2-
        Level 1
-        Spirit's Grave
+        Brynnsmouth Waterway
 
   - name: TX_0202
     index: 0x02

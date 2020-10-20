@@ -138,7 +138,17 @@ interactionCode0c:
 	ld (de),a
 	ret
 
+interactionCode0d:
+	ld a,TREASURE_FEATHER
+	call checkTreasureObtained
+	jp nz,+
 
+	ldbc TREASURE_FEATHER,$00
+	call createTreasure
+	call objectCopyPosition
++
+	jp interactionDelete
+	
 ; ==============================================================================
 ; INTERACID_FALLDOWNHOLE
 ; ==============================================================================

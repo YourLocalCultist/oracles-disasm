@@ -2948,7 +2948,7 @@ _blueStalfosProjectile_subid0:
 ; A bit being 0 means the ball will be reflectable. Cycles through the next bit every time
 ; a projectile is created.
 @ballPatterns:
-	.db %10101101
+	.db %00000000
 
 
 ; Charging

@@ -5144,7 +5144,7 @@ _blueStalfos_main_state09:
 	ld l,Enemy.speed
 	ld (hl),SPEED_20
 
-	ld a,MUS_MINIBOSS
+	ld a,MUS_BOSS
 	ld (wActiveMusic),a
 	call playSound
 

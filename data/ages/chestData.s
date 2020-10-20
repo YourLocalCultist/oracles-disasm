@@ -47,11 +47,12 @@ chestGroup3Data:
 	.db $ff
 
 chestGroup4Data:
+	.db $7c $13 $30 $03
+	.db $27 $08 $42 $00
 	.db $8a $1e $31 $03
 	.db $22 $01 $30 $03
 	.db $5a $15 $34 $01
 	.db $17 $16 $30 $03
-	.db $2c $1a $30 $03
 	.db $59 $1c $2d $0e
 	.db $73 $1f $2d $04
 	.db $16 $23 $31 $03

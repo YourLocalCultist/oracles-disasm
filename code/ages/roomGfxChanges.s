@@ -109,43 +109,12 @@ applyRoomSpecificTileChangesAfterGfxLoad:
 ; $0a: Maku tree past screen
 
 @group0:
-	.db $05 $08
-	.db $2c $08
-	.db $30 $08
-	.db $7b $08
-	.db $90 $08
-	.db $ad $08
-	.db $cb $08
-	.db $d7 $08
-	.db $13 $01
-	.db $ac $03
-	.db $c1 $01
-	.db $83 $00
-	.db $38 $06
-	.db $0a $07
-	.db $67 $09
+	.db $69 $01
 	.db $00
 @group1:
-	.db $01 $08
-	.db $0a $08
-	.db $28 $08
-	.db $34 $08
-	.db $55 $08
-	.db $95 $08
-	.db $d0 $08
-	.db $ca $08
-	.db $08 $01
-	.db $25 $01
-	.db $2d $01
-	.db $80 $01
-	.db $c1 $01
-	.db $67 $09
-	.db $38 $0a
 	.db $00
 @group2:
-	.db $5e $04
-	.db $7e $04
-	.db $af $05
+	.db $01 $04
 	.db $00
 @group3:
 	.db $ed $04
