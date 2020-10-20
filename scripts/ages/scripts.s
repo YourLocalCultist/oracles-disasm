@@ -1715,34 +1715,24 @@ childScript_stage9_singer:
 nayruScript00:
 
 	disableinput
-	asm15 scriptHelp.turnToFaceLink
-	asm15 scriptHelp.forceLinkDirection, DIR_LEFT
-	fadeinFromWhite
-	wait 90
-	showtext TX_1d06
-
-	enableinput
-
 	initcollisions
-
+	asm15 scriptHelp.turnToFaceLink
+	asm15 scriptHelp.forceLinkDirection, DIR_RIGHT
+	asm15 fadeinFromWhite
+	wait 90
+	showtext TX_0111
+	enableinput
+	rungenericnpc TX_0111
 	scriptend
 
 
 nayruScript01:
-	rungenericnpc TX_010b
+	rungenericnpc TX_0111
 
 
 ; Subid $02: Nayru on maku tree screen after being saved
 nayruScript02_part1:
-	checkmemoryeq wTmpcfc0.genericCutscene.cfd0, $01
-	asm15 objectSetVisiblec2
-	checkpalettefadedone
-	wait 30
-	setanimation $02
-	wait 90
-	showtext TX_1d06
-	wait 30
-	writememory wTmpcfc0.genericCutscene.cfd0, $02
+
 	scriptend
 
 nayruScript02_part2:

@@ -253,12 +253,26 @@
 	m_GfxData gfx_capcom_nintendo ; $0c3215
 	m_GfxData map_capcom_nintendo ; $0c35a7
 	m_GfxData flg_capcom_nintendo ; $0c361c
+
+	m_GfxData gfx_credit ; $0c3215
+	m_GfxData map_credit ; $0c35a7
+	m_GfxData flg_credit ; $0c361c
+
 	m_GfxData spr_titlescreen_sprites ; $0c363a
 	m_GfxData gfx_titlescreen_1 ; $0c3885
 	m_GfxData gfx_titlescreen_3 ; $0c3b6a
 	m_GfxData gfx_titlescreen_6 ; $0c3c38
 	m_GfxData map_titlescreen ; $0c3c7a
 	m_GfxData flg_titlescreen ; $0c3de1
+
+	m_GfxData gfx_titlescreeni
+	m_GfxData map_titlescreeni
+	m_GfxData flg_titlescreeni
+
+	m_GfxData gfx_playerselect
+	m_GfxData map_playerselect
+	m_GfxData flg_playerselect
+
 	m_GfxData unk_0c3e4b ; $0c3e4b
 	m_GfxData unk_0c3f45 ; $0c3f45
 	m_GfxData spr_0c3fcf ; $0c3fcf

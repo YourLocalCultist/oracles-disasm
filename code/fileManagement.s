@@ -362,7 +362,7 @@ _initialFileVariables:
 	.db <wLinkMaxHealth			$0c
 	.db <wDeathRespawnBuffer.group		$02
 	.db <wDeathRespawnBuffer.room		$00
-	.db <wDeathRespawnBuffer.y		$38
+	.db <wDeathRespawnBuffer.y		$30
 	.db <wDeathRespawnBuffer.x		$48
 	.db <wDeathRespawnBuffer.facingDir	$00
 	.db <wJabuWaterLevel			$21

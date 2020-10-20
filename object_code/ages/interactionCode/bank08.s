@@ -5879,8 +5879,6 @@ interactionCode36:
 
 @state0:
 	call interactionInitGraphics
-	ld a,>TX_4400
-	call interactionSetHighTextIndex
 	call interactionIncState
 
 	ld e,Interaction.subid
@@ -5929,15 +5927,7 @@ interactionCode36:
 
 @scriptTable:
 	.dw mainScripts.nayruScript00
-	.dw mainScripts.blossomScript1
-	.dw mainScripts.blossomScript2
-	.dw mainScripts.blossomScript3
-	.dw mainScripts.blossomScript4
-	.dw mainScripts.blossomScript5
-	.dw mainScripts.blossomScript6
-	.dw mainScripts.blossomScript7
-	.dw mainScripts.blossomScript8
-	.dw mainScripts.blossomScript9
+	.dw mainScripts.nayruScript00
 
 
 ; ==============================================================================

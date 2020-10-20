@@ -138,9 +138,9 @@ b2_fileSelectScreen:
 	.dw _fileSelectMode2 ; Entering name
 	.dw _fileSelectMode3 ; Copy
 	.dw _fileSelectMode4 ; Erase
-	.dw _fileSelectMode5 ; Selecting between new game, secret, link
-	.dw _fileSelectMode6 ; Entering a secret
-	.dw _fileSelectMode7 ; Game link
+	;.dw _fileSelectMode5 ; Selecting between new game, secret, link
+	;.dw _fileSelectMode6 ; Entering a secret
+	;.dw _fileSelectMode7 ; Game link
 
 ;;
 _func_02_4149:
@@ -217,6 +217,10 @@ _fileSelectMode0:
 	call disableLcd
 	ld a,GFXH_a0
 	call loadGfxHeader
+
+	ld a,GFXH_04
+	call loadGfxHeader
+
 	ld a,MUS_FILE_SELECT
 	call playSound
 	xor a
@@ -278,6 +282,7 @@ _fileSelectMode1:
 	call loadFile
 	ld a,UNCMP_GFXH_16
 	jp loadUncompressedGfxHeader
+	
 
 ;;
 ; Called after selecting something.
@@ -292,7 +297,7 @@ _fileSelectMode1:
 	ld d,$00
 	call _getFileDisplayVariableAddress
 	bit 7,(hl)
-	ld a,$05
+	ld a,$02
 	ret nz
 	xor a
 	ret

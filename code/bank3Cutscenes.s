@@ -359,7 +359,7 @@ runIntro:
 	jr z,_intro_runStage
 
 	ld a,(wIntroStage)
-	cp $03
+	cp $02
 	jr nz,_intro_gotoTitlescreen
 
 ;;
@@ -368,7 +368,6 @@ _intro_runStage:
 	rst_jumpTable
 	.dw _intro_uninitialized
 	.dw _intro_capcomScreen
-	.dw intro_cinematic
 	.dw _intro_titlescreen
 	.dw _intro_restart
 
@@ -435,7 +434,7 @@ _intro_capcomScreen:
 	call loadPaletteHeader
 
 	ld hl,wTmpcbb3
-	ld (hl),208
+	ld (hl),100
 	inc hl
 	ld (hl),$00 ; [wTmpcbb4] = 0
 
@@ -476,9 +475,9 @@ _intro_titlescreen:
 	call clearOam
 
 .ifdef ROM_AGES
-	ld hl,bank3f.titlescreenMakuSeedSprite
-	ld e,:bank3f.titlescreenMakuSeedSprite
-	call addSpritesFromBankToOam
+	;ld hl,bank3f.titlescreenMakuSeedSprite
+	;ld e,:bank3f.titlescreenMakuSeedSprite
+	;call addSpritesFromBankToOam
 
 	ld a,(wTmpcbb3)
 	and $20
@@ -522,6 +521,8 @@ _intro_titlescreen_state0:
 	call loadGfxHeader
 	ld a,PALH_03
 	call loadPaletteHeader
+
+	call fadeinFromWhite
 
 	; cbb3-cbb4 used as a 2-byte counter until automatically exiting
 	ld hl,wTmpcbb3
