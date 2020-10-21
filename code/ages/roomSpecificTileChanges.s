@@ -75,7 +75,7 @@ roomTileChangerCodeGroupTable:
 roomTileChangerCodeGroup0Data:
 	.db $38 $08
 	.db $48 $17
-	.db $5c $14
+	.db $37 $14
 	.db $73 $16
 	.db $ac $18
 	.db $2c $19
@@ -711,11 +711,11 @@ tileReplacement_group0Map5c:
 	ret z
 
 	ld hl,wRoomLayout + $34
-	ld a,$3a
+	ld a,$ee
 	ld (hl),a
-	ld l,$43
-	jp set3Bytes
-
+	;ld l,$43
+	;jp set3Bytes
+	ret
 ;;
 ; Present forest above d2: clear rubble
 tileReplacement_group0Map73:

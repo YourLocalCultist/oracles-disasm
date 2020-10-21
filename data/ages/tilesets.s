@@ -6,7 +6,7 @@ tilesetData: ; 4:4f9c
 	.db $0f $01
 	.db UNIQGFXH_01
 	.db GFXH_40
-	.db PALH_10
+	.db PALH_11
 	.db $00 $00 $00
 
 ; Tileset 0x01

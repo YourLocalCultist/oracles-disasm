@@ -7232,13 +7232,13 @@ checkLinkPushingAgainstBed:
 	ret nz
 
 	ld a,(wActiveGroup)
-	cp $03
+	cp $02
 	ret nz
 
 	; Check link is in room $9e, position $17, facing right
 .ifdef ROM_AGES
-	ldbc $9e, $17
-	ld l,DIR_RIGHT
+	ldbc $00, $24
+	ld l,DIR_LEFT
 .else
 	ldbc $82, $14
 	ld l,DIR_LEFT
