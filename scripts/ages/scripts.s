@@ -1714,6 +1714,8 @@ childScript_stage9_singer:
 ; Subid $00: Cutscene at the beginning of game (talking to Link, then gets possessed)
 nayruScript00:
 
+	jumpifroomflagset $40, @alreadySawCutscene
+	orroomflag $40
 	disableinput
 	initcollisions
 	asm15 scriptHelp.turnToFaceLink
@@ -1722,9 +1724,9 @@ nayruScript00:
 	wait 90
 	showtext TX_0111
 	enableinput
+@alreadySawCutscene
 	rungenericnpc TX_0112
 	scriptend
-
 
 nayruScript01:
 	rungenericnpc TX_0111

@@ -384,8 +384,8 @@ paletteHeader55: ; $65cd
 	m_PaletteHeaderBg  2 6 paletteData5540 $00
 paletteHeader56: ; $65d0
 	m_PaletteHeaderBg  2 6 paletteData5570 $00
-paletteHeader57: ; $65d3
-	m_PaletteHeaderBg  2 6 paletteData55a0 $00
+paletteHeader57: ; $65d3 ylc
+	m_PaletteHeaderBg  0 8 paletteData55a0 $00
 paletteHeader58: ; $65d6
 	m_PaletteHeaderBg  2 6 paletteData55d0 $00
 paletteHeader59: ; $65d9

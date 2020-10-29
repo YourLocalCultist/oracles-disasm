@@ -1000,7 +1000,7 @@ _linkCutsceneB:
 
 @state0:
 	call _linkCutscene_initOam_setVisible_incState
-	call objectSetVisible81
+	;call objectSetVisible81
 
 	ld l,SpecialObject.counter1
 	ld (hl),$2c
@@ -1009,19 +1009,19 @@ _linkCutsceneB:
 	ld l,SpecialObject.yh
 	ld (hl),$d0
 	ld l,SpecialObject.xh
-	ld (hl),$50
+	ld (hl),$f0
 
-	ld a,$08
-	call specialObjectSetAnimation
-	xor a
-	ld (wTmpcbb9),a
+	;ld a,$08
+	;call specialObjectSetAnimation
+	;xor a
+	;ld (wTmpcbb9),a
 
 .ifdef ROM_AGES
 	ldbc INTERACID_SPARKLE, $0d
 .else
 	ldbc INTERACID_SPARKLE, $09
 .endif
-	call objectCreateInteraction
+	;call objectCreateInteraction
 	jr nz,@state1
 	ld l,Interaction.relatedObj1
 	ld a,SpecialObject.start
@@ -1070,8 +1070,8 @@ _linkCutsceneB:
 
 	ld a,$06
 	ld (wTmpcbb9),a
-	ld a,SND_FAIRYCUTSCENE
-	call playSound
+	;ld a,SND_FAIRYCUTSCENE
+	;call playSound
 	jp _linkCutscene_createGlowingOrb
 
 @substate3:

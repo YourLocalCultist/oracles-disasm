@@ -218,8 +218,8 @@ _fileSelectMode0:
 	ld a,GFXH_a0
 	call loadGfxHeader
 
-	ld a,GFXH_04
-	call loadGfxHeader
+	;ld a,GFXH_04
+	;call loadGfxHeader
 
 	ld a,MUS_FILE_SELECT
 	call playSound

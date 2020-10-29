@@ -5880,7 +5880,6 @@ interactionCode36:
 @state0:
 	call interactionInitGraphics
 	call interactionIncState
-
 	ld e,Interaction.subid
 	ld a,(de)
 	ld hl,@scriptTable

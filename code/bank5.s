@@ -414,7 +414,7 @@ specialObjectSetOamVariables:
 
 ; 2 bytes for each SpecialObject id: oamTileIndexBase, oamFlags (palette).
 @data:
-	.db $70 $08 ; 0x00 (Link)
+	.db $70 $0a ; 0x00 (Link)
 	.db $70 $08 ; 0x01
 	.db $70 $08 ; 0x02
 	.db $70 $08 ; 0x03

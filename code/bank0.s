@@ -11134,7 +11134,7 @@ initializeRoom:
 	call   refreshObjectGfx
 	callab roomSpecificCode.runRoomSpecificCode
 	callab roomInitialization.createSeaEffectsPartIfApplicable
-	callab bank1.checkLoadPirateShip
+	;callab bank1.checkLoadPirateShip
 
 	ldh a,(<hRomBank)
 	push af
@@ -11145,11 +11145,11 @@ initializeRoom:
 
 	ld a,(wcc05)
 	bit 2,a
-	call nz,roomInitialization.loadRememberedCompanion
+	;call nz,roomInitialization.loadRememberedCompanion
 
 	ld a,(wcc05)
 	bit 3,a
-	call nz,roomInitialization.checkAndSpawnMaple
+	;call nz,roomInitialization.checkAndSpawnMaple
 
 	ld a,:objectData.parseObjectData
 	setrombank

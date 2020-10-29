@@ -868,7 +868,7 @@ _func_6733:
 	jp setWarpDestVariables
 
 @warpDest1:
-	m_HardcodedWarpA ROOM_AGES_186, $0c, $75, $03
+	m_HardcodedWarpA ROOM_AGES_200, $0c, $75, $03
 
 @warpDest2:
 	m_HardcodedWarpA ROOM_AGES_4f6, $0f, $47, $03
