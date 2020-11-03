@@ -7525,31 +7525,16 @@ tokayShopItemScript:
 ; INTERACID_BOMB_UPGRADE_FAIRY
 ; ==============================================================================
 bombUpgradeFairyScript:
-
-	asm15 objectSetInvisible
-	wait $30
 	disableinput
-
+	orroomflag $80
+	asm15 fadeinFromWhite
 	createpuff
-	asm15 objectSetVisible
-
-	setspeed SPEED_100
-
+	wait $30
 	showtext <TX_000a
-	jumpiftextoptioneq $00, _jumpifnicefairy
-
-	;writememory wHasFairy, $ff
-	asm15 playSound, MUS_SADNESS
-
-	wait $50
-	moveup $60
+	wait $30
+	asm15 fadeinFromWhite
 	enableinput
-	
-	scriptend
-
-_jumpifnicefairy
-	;writememory wHasFairy, $01
-	enableinput
+	asm15 objectSetInvisible
 	scriptend
 
 

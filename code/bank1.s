@@ -4400,7 +4400,8 @@ getNextActiveRoom:
 	ld a,(wActiveRoom)
 	ld hl,mapTransitionGroupTable
 	call findRoomSpecificData
-	jr nc,screenTransitionStandard
+	jp screenTransitionStandard
+	;jr nc,screenTransitionStandard
 	rst_jumpTable
 
 .ifdef ROM_AGES

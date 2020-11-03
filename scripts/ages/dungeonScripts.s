@@ -79,6 +79,8 @@ dungeonScript_minibossDeath:
 
 _enableLinkAndMenu:
 	writememory wDisableLinkCollisionsAndMenu, $00
+	writememory wMenuDisabled, $00
+	writememory wDisabledObjects, $00
 	scriptend
 
 ; Spawn a heart container when the boss is killed.

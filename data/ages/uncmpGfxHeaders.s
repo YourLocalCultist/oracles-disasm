@@ -146,6 +146,7 @@ uncmpGfxHeader1c:
 uncmpGfxHeader1d:
 	m_GfxHeader spr_seed_shooter $8521 $09
 uncmpGfxHeader1e:
+	m_GfxHeader spr_rod_of_seasons $8521 $09
 uncmpGfxHeader1f:
 	m_GfxHeader spr_switch_hook $8521 $0b
 uncmpGfxHeader20:

@@ -373,6 +373,7 @@ tileReplacement_group4Map52:
 ;;
 ; Maku tree present
 tileReplacement_group0Map38:
+	ret
 	ld a,GLOBALFLAG_MAKU_TREE_SAVED
 	call checkGlobalFlag
 	ret z
@@ -392,6 +393,7 @@ tileReplacement_group1Map38:
 ;;
 ; Present: Screen below maku tree
 tileReplacement_group0Map48:
+	ret
 	ld a,GLOBALFLAG_MAKU_TREE_SAVED
 	call checkGlobalFlag
 	ret z
@@ -704,7 +706,7 @@ tileReplacement_group7Map4a:
 	.db $0d $0a $01 $18
 
 ;;
-; Graveyard: Clear the fence if opened
+; Graveyard: Clear the fence if opened; Swamp grate -ylc
 tileReplacement_group0Map5c:
 	call getThisRoomFlags
 	and $80
@@ -719,6 +721,7 @@ tileReplacement_group0Map5c:
 ;;
 ; Present forest above d2: clear rubble
 tileReplacement_group0Map73:
+	ret
 	call getThisRoomFlags
 	and $80
 	ret z
@@ -738,6 +741,7 @@ tileReplacement_group0Map73:
 ;;
 ; Present Tokay: remove scent tree if not planted
 tileReplacement_group0Mapac:
+	ret
 	call getThisRoomFlags
 	and $80
 	ret nz
@@ -754,6 +758,7 @@ tileReplacement_group0Mapac:
 ;;
 ; Rolling ridge present screen with vine
 tileReplacement_group0Map2c:
+	ret
 	ld bc,$0017
 	call getVinePosition
 	jp nz,setTileToWitheredVine
@@ -768,6 +773,7 @@ tileReplacement_group0Map2c:
 ;;
 ; Rolling ridge present, above the screen with a vine
 tileReplacement_group0Map1c:
+	ret
 	ld bc,$0017
 	call getVinePosition
 	ret nz
@@ -783,6 +789,7 @@ tileReplacement_group0Map1c:
 ;;
 ; Tokay island present, D3 entrance screen (has a vine)
 tileReplacement_group0Mapba:
+	ret
 	ld bc,$0218
 	call getVinePosition
 	jp nz,setTileToWitheredVine
@@ -918,6 +925,7 @@ tileReplacement_group0Map61:
 ;;
 ; Screen above talus peaks vines
 tileReplacement_group0Map51:
+	ret
 	ld bc,$0122
 	call getVinePosition
 	jr z,@vines1
@@ -1025,6 +1033,7 @@ initializeVinePositions:
 ;;
 ; Present, bridge to nuun highlands
 tileReplacement_group0Map54:
+	ret
 	xor a
 	ld (wSwitchState),a
 	call getThisRoomFlags
@@ -1048,6 +1057,7 @@ tileReplacement_group0Map54:
 ;;
 ; Present, right side of bridge to symmetry city
 tileReplacement_group0Map25:
+	ret
 	ld a,GLOBALFLAG_SYMMETRY_BRIDGE_BUILT
 	call checkGlobalFlag
 	ret z
@@ -1067,6 +1077,7 @@ tileReplacement_group0Map25:
 ;;
 ; Present overworld, impa's house
 tileReplacement_group0Map3a:
+	ret
 	ld a,GLOBALFLAG_INTRO_DONE
 	call checkGlobalFlag
 	ret z

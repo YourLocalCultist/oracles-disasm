@@ -1655,7 +1655,7 @@ _interaction7f_subid00:
 ;   b3: wWarpTransition
 @essenceWarps:
 .ifdef ROM_AGES
-	.db $80, $8d, $26, TRANSITION_DEST_SET_RESPAWN
+	.db $80, $37, $34, TRANSITION_DEST_SET_RESPAWN
 	.db $81, $83, $25, TRANSITION_DEST_SET_RESPAWN
 	.db $80, $ba, $55, TRANSITION_DEST_SET_RESPAWN
 	.db $80, $03, $35, TRANSITION_DEST_X_SHIFTED

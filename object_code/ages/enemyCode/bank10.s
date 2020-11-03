@@ -73,9 +73,11 @@ enemyCode02:
 	ld a,(de)
 	ld e,Enemy.state
 	rst_jumpTable
-	.dw _veranFinal_turtleForm
+	;.dw _veranFinal_turtleForm
 	.dw _veranFinal_spiderForm
-	.dw _veranFinal_beeForm
+	;.dw _veranFinal_beeForm
+	.dw _veranFinal_spiderForm
+	.dw _veranFinal_spiderForm
 
 
 _veranFinal_turtleForm:
@@ -99,8 +101,8 @@ _veranFinal_turtleForm_state0:
 	ld (wEnemyIDToLoadExtraGfx),a
 	ld a,PALH_87
 	call loadPaletteHeader
-	ld a,SNDCTRL_STOPMUSIC
-	call playSound
+	;ld a,SNDCTRL_STOPMUSIC
+	;call playSound
 	ld a,$01
 	ld (wDisabledObjects),a
 	ld (wMenuDisabled),a
@@ -114,10 +116,10 @@ _veranFinal_turtleForm_state0:
 	ld l,Enemy.health
 	ld a,(hl)
 	ld bc,$0c18
-	jr nz,++
+	;jr nz,++
 
 	; Unlinked: less health (for all forms)
-	ld a,$14
+	ld a,$04
 	ld (hl),a
 	ld bc,$080f
 ++
@@ -157,7 +159,7 @@ _veranFinal_turtleForm_state1:
 	ld (wMenuDisabled),a
 	ld a,$03
 	call enemySetAnimation
-	ld a,MUS_FINAL_BOSS
+	ld a,MUS_BOSS
 	ld (wActiveMusic),a
 	jp playSound
 
@@ -405,9 +407,9 @@ _veranFinal_turtleForm_stateA:
 	call checkLinkVulnerable
 	ret nc
 
-	ld a,$01
-	ld (wMenuDisabled),a
-	ld (wDisabledObjects),a
+	;ld a,$01
+	;ld (wMenuDisabled),a
+	;ld (wDisabledObjects),a
 
 	call dropLinkHeldItem
 	call clearAllParentItems
@@ -457,8 +459,8 @@ _veranFinal_turtleForm_stateA:
 _veranFinal_spiderForm:
 	ld a,(de)
 	rst_jumpTable
-	.dw _veranFinal_spiderOrBeeForm_state0
-	.dw _veranFinal_spiderForm_state1
+	.dw _veranFinal_turtleForm_state0
+	.dw _veranFinal_turtleForm_state1
 	.dw _veranFinal_spiderForm_state2
 	.dw _veranFinal_spiderForm_state3
 	.dw _veranFinal_spiderForm_state4
@@ -466,7 +468,6 @@ _veranFinal_spiderForm:
 
 _veranFinal_spiderOrBeeForm_state0:
 	ret
-
 
 _veranFinal_spiderForm_state1:
 	call enemyAnimate
@@ -477,7 +478,7 @@ _veranFinal_spiderForm_state1:
 
 	ld bc,$1010
 	ld e,ENEMYCOLLISION_VERAN_SPIDER_FORM
-	ld l,Enemy.var31
+	ld l,$01
 	call _veranFinal_initializeForm
 	ld a,$05
 	call enemySetAnimation
@@ -1332,10 +1333,12 @@ _veranFinal_spiderForm_decideWhetherToAttack:
 
 ;;
 _veranFinal_dead:
-	ld e,Enemy.subid
-	ld a,(de)
-	or a
-	jr nz,@transformed
+	jp _enemyBoss_dead
+	ret
+	;ld e,Enemy.subid
+	;ld a,(de)
+	;or a
+	;jr nz,@transformed
 
 	; Not transformed; dead for real
 	ld h,d

@@ -16,7 +16,7 @@
 enemyData:
 	/* 0x00 */ m_EnemyData $00 $00 $00 $00
 	/* 0x01 */ m_EnemyData $db $08 $34 $00
-	/* 0x02 */ m_EnemyData $d7 $ea $30 $60
+	/* 0x02 */ m_EnemyData $d7 $ea $30 $00
 	/* 0x03 */ m_EnemyData $33 $8a $33 $00
 	/* 0x04 */ m_EnemyData $16 $8b $35 $10
 	/* 0x05 */ m_EnemyData $cf $8c $02 $60
@@ -133,7 +133,7 @@ enemyData:
 	/* 0x74 */ m_EnemyData $b7 $c5 $20 $30
 	/* 0x75 */ m_EnemyData $3c $46 $21 $20
 	/* 0x76 */ m_EnemyData $b8 $e4 $22 $10
-	/* 0x77 */ m_EnemyData $b9 $c8 $23 $10
+	/* 0x77 */ m_EnemyData $b9 $c8 $23 $20
 	/* 0x78 */ m_EnemyData $bc $c9 $24 $30
 	/* 0x79 */ m_EnemyData $bf $ca $25 $00
 	/* 0x7a */ m_EnemyData $c2 $4b $26 $30

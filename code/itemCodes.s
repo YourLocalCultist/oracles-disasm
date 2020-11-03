@@ -4572,7 +4572,7 @@ itemCode18:
 	dec (hl)
 	dec (hl)
 	ret
-.else
+.endif
 ; ITEMID_ROD_OF_SEASONS
 itemCode07:
 	call _itemTransferKnockbackToLink
@@ -4591,7 +4591,7 @@ itemCode07:
 	ld (hl),$10
 	ld a,$74
 	call playSound
-	ld a,$1c
+	ld a,$1e
 	call loadWeaponGfx
 	call _itemLoadAttributesAndGraphics
 	jp objectSetVisible82
@@ -4600,18 +4600,37 @@ itemCode07:
 	ld l,$06
 	dec (hl)
 	ret nz
-	ld a,(wActiveTileType)
-	cp $08
-	ret nz
-	call getFreeInteractionSlot
-	ret nz
-	ld (hl),INTERACID_USED_ROD_OF_SEASONS
-	ld e,$09
-	ld l,$49
-	ld a,(de)
-	ldi (hl),a
-	jp objectCopyPosition
-.endif
+
+	ldbc ITEMID_EMBER_SEED,$01
+    call getFreeItemSlot
+    ret nz
+
+    inc (hl)
+    inc l
+    ld a,b
+    ldi (hl),a
+    ld a,c
+    ldi (hl),a
+
+    ; Copy link direction, angle, & position variables
+    push de
+    ld de,w1Link.direction
+    ld l,Item.direction
+    ld b,$08
+    call copyMemoryReverse
+	pop de
+	
+	ld e,Item.direction;
+    ld a,(de)
+    add a
+    add a
+    add a
+    ld l,Item.angle; 
+    ld (hl), a
+
+    scf
+
+    ret
 
 ;;
 ; ITEMID_MINECART_COLLISION

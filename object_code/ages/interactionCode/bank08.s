@@ -770,7 +770,7 @@ interactionCode20:
 	.dw mainScripts.wingDungeonScript_spawnFeather
 	.dw mainScripts.wingDungeonScript_spawn30Rupees
 	.dw mainScripts.dungeonScript_minibossDeath
-	.dw mainScripts.wingDungeonScript_bossDeath
+	.dw mainScripts.dungeonScript_bossDeath
 @dungeon3:
 	.dw mainScripts.dungeonScript_minibossDeath
 	.dw mainScripts.dungeonScript_bossDeath

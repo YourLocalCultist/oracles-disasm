@@ -3960,7 +3960,7 @@ _func_02_55b2:
 	ld a,(wInventorySubmenu)
 	rst_jumpTable
 	.dw @subScreen0
-	.dw @subScreen1
+	;.dw @subScreen1
 	.dw @subScreen2
 
 ;;
@@ -3969,7 +3969,8 @@ _func_02_55b2:
 	ld (wStatusBarNeedsRefresh),a
 	ld a,GFXH_09
 	call loadGfxHeader
-	jp _inventorySubscreen0_drawStoredItems
+	call _inventorySubscreen0_drawStoredItems
+	jp _inventorySubscreen1_drawTreasures
 
 ;;
 @subScreen1:
@@ -4000,7 +4001,7 @@ _inventoryMenuState1:
 	ld a,(wInventorySubmenu)
 	rst_jumpTable
 	.dw @subscreen0
-	.dw @subscreen1
+	;.dw @subscreen1
 	.dw @subscreen2
 
 ;;
@@ -4024,6 +4025,15 @@ _inventoryMenuState1:
 	jr nz,@aOrB
 
 	call _inventorySubscreen0CheckDirectionButtons
+
+	ld hl,wInventorySubmenu0CursorPos
+	;ld e, a
+	ld a, (hl)
+	or $08
+	sub $08
+	ld (hl), a
+	;ld a, e
+
 	ld a,(wInventorySubmenu0CursorPos)
 	ld hl,wInventoryStorage
 	rst_addAToHl
@@ -4073,6 +4083,7 @@ _inventoryMenuState1:
 @finalizeEquip:
 	call @equipItem
 	call _inventorySubscreen0_drawStoredItems
+	call _inventorySubscreen1_drawTreasures
 	call _inventorySubscreen0_drawCursor
 	ld a,SND_SELECTITEM
 	call playSound
@@ -4151,6 +4162,7 @@ _inventoryMenuState1:
 ;;
 ; Main code for secondary item screen (rings, passive items, etc)
 @subscreen1:
+	jp @subscreen2
 	ld a,(wKeysJustPressed)
 	bit BTN_BIT_A,a
 	jr nz,+
@@ -4479,7 +4491,7 @@ _inventoryMenuState3:
 	ld hl,wInventorySubmenu
 	ld a,(hl)
 	inc a
-	cp $03
+	cp $02
 	jr c,+
 	xor a
 +
@@ -4549,8 +4561,15 @@ _inventorySubscreen0CheckDirectionButtons:
 	ld hl,@offsets
 	call _getDirectionButtonOffsetFromHl
 	ret nc
-
+	
 	ld hl,wInventorySubmenu0CursorPos
+	ld e, a
+	ld a, (hl)
+	or $08
+	sub $08
+	ld (hl), a
+	ld a, e
+
 	add (hl)
 	and $0f
 	ld (hl),a
@@ -5147,7 +5166,7 @@ _drawEquippedSpriteForActiveRing:
 ;;
 ; Draw all items in wInventoryStorage to their appropriate positions.
 _inventorySubscreen0_drawStoredItems:
-	ld a,$10
+	ld a,$08
 --
 	ldh (<hFF8D),a
 	ld hl,wInventoryStorage-1
@@ -5244,7 +5263,7 @@ _inventorySubscreen1_drawTreasures:
 	ld b,$03
 	ld l,a
 	ld h,>w4TileMap+1
-	call _fillRectangleInTileMapWithMenuBlock
+	;call _fillRectangleInTileMapWithMenuBlock
 
 @drawRings:
 	call _getRingBoxCapacity
@@ -5306,7 +5325,7 @@ _inventorySubscreen1_drawTreasures:
 	ld a,d
 	and $0f
 	add c
-	ld de,w4TileMap+$62
+	ld de,w4TileMap+$c2
 	call addAToDe
 	ret
 
@@ -5748,7 +5767,7 @@ _inventoryMenuDrawHarpSprites:
 	jr z,--
 
 	ld a,(wInventorySubmenu)
-	cp $02
+	cp $01
 	ret z
 
 	or a

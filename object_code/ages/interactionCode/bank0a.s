@@ -4190,17 +4190,33 @@ interactionCode83:
 
 @state0:
 
-	ld a,TREASURE_SWORD
-	call checkTreasureObtained
-	jp nz,+
+	call getThisRoomFlags
+	and $80
+	jp nz,interactionDelete
+
+	ld a,(w1Link.xh)
+	cp $70
+	jp z, +
+
+	ld a,(wcde3)
+	cp $69
+	ret z
 
 	ldbc TREASURE_SWORD,$00
 	call createTreasure
 	call objectCopyPosition
-	jp interactionDelete
+
+	ld a, $69
+	ld (wcde3), a
+
+	ret
 +
-	;call interactionInitGraphics
-	;call interactionIncState
+
+	ld bc,$2058
+	call interactionSetPosition
+
+	call interactionInitGraphics
+	call interactionIncState
 
 	ld e,Interaction.subid
 	ld a,(de)
@@ -4219,20 +4235,12 @@ interactionCode83:
 
 @initAnimation0:
 	ld a,$00
-	;call interactionSetAnimation
-	;jp @updateCollisionAndVisibility
+	call interactionSetAnimation
+	jp @updateCollisionAndVisibility
 
 @state1:
-	;ld hl,wHasFairy
-	;ld a, (hl)
-	;cp a, $0
-	;jp nz, +
-
-	;ld bc,$2058
-	;call interactionSetPosition
-+
-	;call interactionRunScript
-	;jp @updateAnimation
+	call interactionRunScript
+	jp @updateAnimation
 
 @updateAnimation:
 	call interactionAnimate

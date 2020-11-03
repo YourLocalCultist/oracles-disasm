@@ -70,15 +70,11 @@ groups:
   - name: TX_000a
     index: 0x0a
     text: |-
-      Hello!
-      I saw that you had wash a shore on this beach earlier...
-      Sorry I couldn't have been more help,
-      that girl found you first.\stop
-      ...\stop
-      Oh! I was keeping your sword safe!\stop
-      ...\stop
-      Can I come with you?
-        \opt()Yes \opt()No
+      Greetings... By now, I'm sure you have noticed the storm surrounding this island.\stop
+      At present there is no way to leave.\stop
+      Perhaps try exploring the swamp north east of here,
+      you might find answers to some questions you may have.\stop
+      Good luck.
       
 
   - name: TX_000b

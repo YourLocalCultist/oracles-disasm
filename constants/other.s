@@ -15,12 +15,12 @@
 
 ; Overworld size
 .ifdef ROM_AGES
-	.define OVERWORLD_WIDTH		14
-	.define OVERWORLD_HEIGHT	14
+	.define OVERWORLD_WIDTH		10
+	.define OVERWORLD_HEIGHT	8
 
 	; The starting X/Y positions of the tile grid on the map screen
-	.define OVERWORLD_MAP_START_X	3
-	.define OVERWORLD_MAP_START_Y	2
+	.define OVERWORLD_MAP_START_X	5
+	.define OVERWORLD_MAP_START_Y	5
 
 	; The first index at which to move popups on the map screen to the opposite side
 	; of the screen. Ie. when cursor X is from 0-7 it's on the right; from 8-15 it's
@@ -28,8 +28,8 @@
 	.define OVERWORD_MAP_POPUP_SHIFT_INDEX_X	8
 	.define OVERWORD_MAP_POPUP_SHIFT_INDEX_Y	8
 
-	.define NUM_DUNGEONS		$10
-	.define NUM_DUNGEONS_DIV_8	2 ; Above value divided by 8, rounded up
+	.define NUM_DUNGEONS		$8
+	.define NUM_DUNGEONS_DIV_8	1 ; Above value divided by 8, rounded up
 
 .else; ROM_SEASONS
 	.define OVERWORLD_WIDTH		16
@@ -70,7 +70,7 @@
 .define NUM_GASHA_SPOTS		$10
 
 ; Number of items the inventory can hold (not including A and B buttons)
-.define INVENTORY_CAPACITY	$10
+.define INVENTORY_CAPACITY	$08
 
 
 .ifdef ROM_AGES
