@@ -421,6 +421,7 @@ paletteHeader6c:
 paletteHeader6d:
 paletteHeader6e:
 paletteHeader6f:
+	m_PaletteHeaderBg  2 6 paletteDataFortune $00
 paletteHeader70:
 	m_PaletteHeaderBg  2 6 paletteData5600 $00
 paletteHeader71: ; $65fa

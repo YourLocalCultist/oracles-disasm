@@ -307,8 +307,8 @@ tilesetData: ; 4:4f9c
 	.db $1f $04
 	.db UNIQGFXH_00
 	.db GFXH_7b
-	.db PALH_70
-	.db $15 $03 $10
+	.db PALH_6f
+	.db $15 $01 $10
 
 ; Tileset 0x2c
 	.db $1f $04

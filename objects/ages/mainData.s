@@ -243,7 +243,6 @@ group2Map03ObjectData:
 group2Map04ObjectData:
 group2Map05ObjectData:
 group2Map06ObjectData:
-group2Map07ObjectData:
 group2Map08ObjectData:
 group2Map09ObjectData:
 group2Map0aObjectData:
@@ -4778,7 +4777,7 @@ group4Map02ObjectData:
 	obj_End
 
 group2Map10ObjectData:
-	obj_Interaction $39 $00 $38 $50
+	obj_Interaction $39 $00 $48 $50
 	obj_End
 
 group2Map00ObjectData:
@@ -4807,4 +4806,8 @@ group0Map28ObjectData:
 
 group0Map76ObjectData:
 	obj_Pointer group0Map76EnemyObjectData
+	obj_End
+
+group2Map07ObjectData:
+	obj_Interaction $9d $00 $28 $50
 	obj_End

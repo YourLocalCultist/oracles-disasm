@@ -181,7 +181,7 @@ interactionData:
 	/* $9a */ m_InteractionData $60 $00 $10
 	/* $9b */ m_InteractionData $00 $00 $00
 	/* $9c */ m_InteractionData interaction9cSubidData
-	/* $9d */ m_InteractionData $5f $14 $02
+	/* $9d */ m_InteractionData $5f $14 $10
 	/* $9e */ m_InteractionData $6c $1c $50
 	/* $9f */ m_InteractionData interaction9fSubidData
 	/* $a0 */ m_InteractionData interactiona0SubidData

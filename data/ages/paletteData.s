@@ -3671,6 +3671,37 @@ paletteData5600:
 	m_RGB16 $05 $0a $0f
 	m_RGB16 $00 $00 $00
 
+paletteDataFortune:
+	m_RGB16 $1b $14 $08
+	m_RGB16 $1b $06 $06
+	m_RGB16 $13 $00 $00
+	m_RGB16 $00 $00 $00
+
+	m_RGB16 $13 $0e $0e
+	m_RGB16 $0f $09 $09
+	m_RGB16 $0a $06 $09
+	m_RGB16 $00 $00 $00
+
+	m_RGB16 $1a $13 $13
+	m_RGB16 $13 $0e $0e
+	m_RGB16 $0f $09 $09
+	m_RGB16 $00 $00 $00
+
+	m_RGB16 $1c $1c $1e
+	m_RGB16 $0e $16 $0e
+	m_RGB16 $05 $0c $05
+	m_RGB16 $00 $00 $00
+
+	m_RGB16 $0c $0c $11
+	m_RGB16 $0a $0a $0f
+	m_RGB16 $08 $08 $0e
+	m_RGB16 $03 $03 $08
+
+	m_RGB16 $1c $1c $1e
+	m_RGB16 $0b $10 $14
+	m_RGB16 $05 $0a $0f
+	m_RGB16 $00 $00 $00
+
 paletteData5630:
 	m_RGB16 $10 $0c $07
 	m_RGB16 $1c $12 $00
