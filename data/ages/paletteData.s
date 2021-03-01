@@ -1725,10 +1725,10 @@ paletteData4a60:
 	m_RGB16 $00 $03 $11
 	m_RGB16 $00 $00 $00
 
-	m_RGB16 $1c $15 $0b
-	m_RGB16 $17 $0b $11
-	m_RGB16 $10 $00 $0e
-	m_RGB16 $00 $05 $05
+	m_RGB16 $18 $11 $04
+	m_RGB16 $0e $09 $04
+	m_RGB16 $0a $04 $02
+	m_RGB16 $00 $00 $00
 
 paletteData4a90:
 	m_RGB16 $18 $13 $11
@@ -1932,7 +1932,7 @@ paletteData4bb0:
 	m_RGB16 $0c $09 $0a
 	m_RGB16 $00 $00 $00
 
-	m_RGB16 $1e $1e $1e
+	m_RGB16 $1f $1e $1f
 	m_RGB16 $14 $14 $1e
 	m_RGB16 $0c $0c $1d
 	m_RGB16 $00 $00 $00

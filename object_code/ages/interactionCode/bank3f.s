@@ -39,13 +39,13 @@ interactionCode39_body:
 	ld a,(de)
 	rst_jumpTable
 	.dw @subid0Init
-	.dw @subid1Init
-	.dw @subid2Init
-	.dw @subid3Init
-	.dw @subid4Init
-	.dw @subid5Init
-	.dw @subid6Init
-	.dw @subid7Init
+	.dw @subid0Init
+	.dw @subid0Init
+	.dw @subid0Init
+	.dw @subid0Init
+	.dw @subid0Init
+	.dw @subid0Init
+	.dw @subid0Init
 
 @subid0Init:
 	ld a,$02
@@ -239,6 +239,7 @@ interactionCode39_body:
 	ret
 
 @subid5Init:
+	ret
 	ld a,GLOBALFLAG_SAVED_NAYRU
 	call checkGlobalFlag
 	jp z,interactionDelete
@@ -246,7 +247,7 @@ interactionCode39_body:
 	ld l,Interaction.counter1
 	ldi (hl),a
 	ld (hl),a
-	ld hl,mainScripts.monkeySubid5Script
+	;ld hl,mainScripts.monkeySubid5Script
 
 	ld e,Interaction.var03
 	ld a,(de)
@@ -256,7 +257,7 @@ interactionCode39_body:
 	; Bowtie monkey has a different script
 	push af
 	call @initBowtieMonkey
-	ld hl,mainScripts.monkeySubid5Script_bowtieMonkey
+	;ld hl,mainScripts.monkeySubid5Script_bowtieMonkey
 	pop af
 +
 	; Monkey $05 gets the red palette
@@ -290,7 +291,7 @@ interactionCode39_body:
 	call checkGlobalFlag
 	jp z,interactionDelete
 
-	ld hl,mainScripts.monkeySubid7Script_0
+	;ld hl,mainScripts.monkeySubid7Script_0
 	call interactionSetScript
 	ld a,$06
 	jr @setVar3aAnimation
@@ -300,7 +301,7 @@ interactionCode39_body:
 	call checkGlobalFlag
 	jp z,interactionDelete
 
-	ld hl,mainScripts.monkeySubid7Script_1
+	;ld hl,mainScripts.monkeySubid7Script_1
 	call interactionSetScript
 	ld a,$05
 	jr @setVar3aAnimation
@@ -316,9 +317,9 @@ interactionCode39_body:
 
 	ld a,GLOBALFLAG_SAVED_NAYRU
 	call checkGlobalFlag
-	ld hl,mainScripts.monkeySubid7Script_2
+	;ld hl,mainScripts.monkeySubid7Script_2
 	jp z,@setScript
-	ld hl,mainScripts.monkeySubid7Script_3
+	;ld hl,mainScripts.monkeySubid7Script_3
 @setScript:
 	call interactionSetScript
 	ld a,$05
@@ -911,8 +912,8 @@ _monkeySubid5State1_monkey9:
 	.dw _monkey9Disappearance@substate3
 
 _introMonkeyScriptTable:
-	.dw mainScripts.monkeySubid2Script
-	.dw mainScripts.monkeySubid3Script
+	;.dw mainScripts.monkeySubid2Script
+	.dw mainScripts.monkeySubid0Script
 
 
 ; ==============================================================================

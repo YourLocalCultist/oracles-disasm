@@ -11,6 +11,7 @@ chestDataGroupTable:
 	.dw chestGroup7Data
 
 chestGroup0Data:
+	.db $45 $61 $03 $00
 	.db $35 $66 $07 $00
 	.db $49 $51 $28 $04
 	.db $51 $49 $28 $04

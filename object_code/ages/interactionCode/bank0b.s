@@ -822,6 +822,7 @@ interactionCode9d:
 
 @state0:
 	call interactionInitGraphics
+	call darkenRoom
 	ld a,>TX_2c00
 	call interactionSetHighTextIndex
 	ld hl,mainScripts.tokkeyScript

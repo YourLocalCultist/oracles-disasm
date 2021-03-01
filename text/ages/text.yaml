@@ -11238,18 +11238,7 @@ groups:
   - name: TX_24a8
     index: 0xa8
     text: |-
-      \sfx(0xc7)Welcome to
-      Target Carts!
-      Fire your \col(1)Seed
-      Shooter\col(0) while
-      riding in a
-      cart. If you hit
-      enough targets,
-      you win a prize!
-      Up to 3 misses
-      wins 20 Rupees.
-      Want to try? It
-      costs 10 Rupees.
+      It costs 10 Rupees.
         \opt()Yes \opt()No
 
   - name: TX_24a9

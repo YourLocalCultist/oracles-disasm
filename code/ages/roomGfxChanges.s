@@ -115,6 +115,7 @@ applyRoomSpecificTileChangesAfterGfxLoad:
 	.db $00
 @group2:
 	.db $01 $04
+	.db $08 $04
 	.db $00
 @group3:
 	.db $ed $04

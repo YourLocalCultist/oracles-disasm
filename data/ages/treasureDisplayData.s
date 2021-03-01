@@ -185,7 +185,7 @@ treasureDisplayData_bracelet:
 	.db TREASURE_BRACELET $98 $05 $00 $00 $00 <TX_093f ; L2
 
 treasureDisplayData_trade:
-	.db TREASURE_TRADEITEM $c0 $05 $c1 $05 $ff <TX_0909 ; Poe clock
+	.db TREASURE_TRADEITEM $ee $03 $ef $03 $ff <TX_0909 ; Poe clock - Bananas
 	.db TREASURE_TRADEITEM $c2 $02 $c2 $22 $ff <TX_090a ; Stationery
 	.db TREASURE_TRADEITEM $c3 $00 $c4 $00 $ff <TX_090b ; Stink bag
 	.db TREASURE_TRADEITEM $c5 $03 $c6 $03 $ff <TX_090c ; Tasty meat
